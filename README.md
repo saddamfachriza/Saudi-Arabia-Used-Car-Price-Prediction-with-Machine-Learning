@@ -6,23 +6,23 @@ Pasar mobil bekas berkembang pesat karena menawarkan variasi harga yang lebih fl
 
 Syarah merupakan situs jual beli mobil bekas di Arab Saudi yang mempertemukan penjual dan pembeli kendaraan melalui platform digital. Syarah.com memberikan pelayanan maksimal pada situs dan aplikasi yang mereka buat seperti jenis dan merek mobil, variasi harga, dan juga lokasi kendaraan dapat diakses semua melalui situs dan aplikasi resmi. karena dalam operasionalnya, setiap penjual dapat mengunggah spesifikasi kendaraan seperti tipe mobil, merek, jenis transmisi, kelengkapan fitur, tahun produksi, kapasitas mesin, serta jarak tempuh. Informasi tersebut menjadi dasar utama dalam menentukan harga jual kendaraan. Maka dari itu pelanggan atau pembeli pada situs Syarah.com mendapatkan informasi lengkap dari seluruh kendaraan yang tersedia pada situs dan aplikasi.
 
-__________________________________________________________________________________________________________________________________________________________________
+
 ## **Business Problem Statement**
 Marketplace mobil bekas seperti Syarah pastinya memiliki permasalahan, salah satunya adalah proses penentuan harga kendaraan. Ketidaktepatan dalam menetapkan acuan harga berpotensi menyebabkan kendaraan terlalu mahal sehingga sulit terjual, atau terlalu murah sehingga merugikan penjual. Kondisi ini tidak hanya mempengaruhi efisiensi waktu terhadap pemilihan harga, tetapi juga berdampak pada dan performa bisnis marketplace secara keseluruhan. 
 
 Dengan banyaknya faktor yang memengaruhi harga mobil bekas—seperti usia kendaraan, jarak tempuh, merek, tipe kendaraan, kapasitas mesin, serta wilayah penjualan—diperlukan pendekatan berbasis data yang mampu mengidentifikasi pola harga pasar secara objektif dan konsisten.
 
-__________________________________________________________________________________________________________________________________________________________________
+
 ## **Stakeholders**
 **Marketplace Team**
 
 Spesifiknya adalah Marketplace Management & Marketplace Developers
 
-__________________________________________________________________________________________________________________________________________________________________
+
 ## **Goals**
 Membangun model machine learning yang mampu memprediksi harga mobil bekas berdasarkan karakteristik kendaraan, sehingga dapat digunakan sebagai sistem rekomendasi harga yang membantu seller menetapkan harga yang optimal dan kompetitif.
 
-__________________________________________________________________________________________________________________________________________________________________
+
 ## **Analytical Approach**
 Untuk menjawab permasalahan penentuan harga kendaraan di marketplace seperti Syarah, pendekatan yang digunakan dalam proyek ini adalah supervised machine learning dengan metode regresi, karena variabel target yang diprediksi berupa nilai numerik kontinu (Price).
 
@@ -30,7 +30,7 @@ Tahapan analisis dimulai dari eksplorasi data untuk memahami distribusi harga da
 
 Selanjutnya dilakukan proses pemodelan dengan membandingkan beberapa algoritma regresi untuk menemukan model dengan performa terbaik. Setelah model terbaik diperoleh, dilakukan hyperparameter tuning guna mengoptimalkan performa serta mengurangi risiko overfitting. Evaluasi akhir dilakukan pada data testing untuk memastikan model memiliki kemampuan generalisasi yang baik terhadap data baru.
 
-__________________________________________________________________________________________________________________________________________________________________
+
 ## **Evaluation Metrics**
 Tujuan utama proyek ini adalah memprediksi harga mobil bekas secara akurat dan stabil, Evaluasi model dilakukan menggunakan beberapa metrik regresi berikut:
 
@@ -45,7 +45,7 @@ MAPE digunakan untuk memahami besar kesalahan dalam bentuk persentase terhadap h
 
 Selain itu, dilakukan evaluasi terhadap gap antara performa training dan testing untuk memastikan model tidak mengalami overfitting. Model yang baik diharapkan memiliki error yang rendah sekaligus stabil pada data baru, sehingga dapat diandalkan saat diimplementasikan dalam sistem produksi.
 
-__________________________________________________________________________________________________________________________________________________________________
+
 ## **Data Understanding**
 - Dataset merupakan data listing mobil bekas yang dijual pada lokasi asal Saudi Arabia.
 - Setiap baris data merepresentasikan informasi terkait kendaraan yang dijual.
@@ -65,7 +65,7 @@ ________________________________________________________________________________
 | Mileage | Integer | Mileage |
 | Negotiable | Object | Negotiable in dollars |
 | Price | Integer | Amount of used car |
-__________________________________________________________________________________________________________________________________________________________________
+
 ## **Conclusion** 
 Secara keseluruhan, model machine learning yang dikembangkan menggunakan XGBoost Regressor menunjukkan performa yang cukup baik dalam memprediksi nilai target. Model mampu menangkap pola utama dalam data dengan tingkat error yang relatif rendah, Hal ini ditunjukkan dari nilai evaluasi RMSE (Root Mean Squared Error) yang menampilkan error sebesar 6.32%. karena ada jarak antara data test dan data train yaitu RMSE Train : 21939.838467955957, RMSE Test : 23327.558294858038. Sehingga mengindikasikan bahwa rata-rata kesalahan prediksi model masih dalam batas yang dapat diterima.
 
@@ -75,7 +75,7 @@ Dari sisi diagnostik, ditemukan bahwa model masih memiliki keterbatasan dalam me
 
 Dengan demikian, dapat disimpulkan bahwa model sudah cukup robust dan layak digunakan sebagai baseline. Namun, masih terdapat ruang untuk perbaikan, khususnya dalam meningkatkan akurasi prediksi pada nilai tinggi serta mengurangi variasi error.
 
-__________________________________________________________________________________________________________________________________________________________________
+
 ## **Recomendation**
 Berdasarkan hasil diatas, terdapat beberapa rekomendasi yang dapat dilakukan untuk pengembangan lebih lanjut adalah sebagai berikut:
 
